@@ -5,6 +5,7 @@ import Activities from './components/Activities';
 import Design from './components/Design';
 import About from './components/About';
 import Support from './components/Support';
+import SocialMedia from './components/SocialMedia';
 import Marketplace from './components/Marketplace';
 import Footer from './components/Footer';
 
@@ -19,6 +20,7 @@ function App() {
       <Design />
       <About />
       <Support />
+      <SocialMedia />
       <Marketplace />
       <Footer />
     </div>
