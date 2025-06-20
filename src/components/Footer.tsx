@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Mail, MapPin, Phone, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Mail, MapPin, Phone, Facebook, Instagram, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-2 mb-6">
               <img
                 src="/img/logo.svg"
-                alt="Heart"
+                alt="Logo"
                 className="h-8 w-8"
               />
               <span className="text-xl font-bold">Mahtaa Recreation Centre</span>

@@ -7,15 +7,15 @@ const Marketplace: React.FC = () => {
       id: 1,
       name: "Handwoven Textile",
       price: "$45",
-      image: "https://images.pexels.com/photos/1148988/pexels-photo-1148988.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://images.pexels.com/photos/32071429/pexels-photo-32071429.jpeg?auto=compress&cs=tinysrgb&w=400",
       rating: 4.9,
-      artist: "Amara K."
+      artist: "Büşra B."
     },
     {
       id: 2,
       name: "Ceramic Pottery Set",
       price: "$32",
-      image: "https://images.pexels.com/photos/1153929/pexels-photo-1153929.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://images.pexels.com/photos/27208616/pexels-photo-27208616.jpeg?auto=compress&cs=tinysrgb&w=400",
       rating: 4.8,
       artist: "Dmitri L."
     },
@@ -23,7 +23,7 @@ const Marketplace: React.FC = () => {
       id: 3,
       name: "Traditional Embroidery",
       price: "$28",
-      image: "https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://images.pexels.com/photos/5806996/pexels-photo-5806996.jpeg?auto=compress&cs=tinysrgb&w=400",
       rating: 5.0,
       artist: "Fatima A."
     },
@@ -31,7 +31,7 @@ const Marketplace: React.FC = () => {
       id: 4,
       name: "Wooden Carved Art",
       price: "$65",
-      image: "https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://images.pexels.com/photos/15403144/pexels-photo-15403144.jpeg?auto=compress&cs=tinysrgb&w=400",
       rating: 4.7,
       artist: "Yusuf M."
     },
@@ -39,7 +39,7 @@ const Marketplace: React.FC = () => {
       id: 5,
       name: "Woven Basket",
       price: "$22",
-      image: "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://images.pexels.com/photos/31390662/pexels-photo-31390662.jpeg?auto=compress&cs=tinysrgb&w=400",
       rating: 4.9,
       artist: "Elena S."
     },
@@ -47,7 +47,7 @@ const Marketplace: React.FC = () => {
       id: 6,
       name: "Hand-painted Scarf",
       price: "$38",
-      image: "https://images.pexels.com/photos/1182826/pexels-photo-1182826.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://images.pexels.com/photos/9467196/pexels-photo-9467196.jpeg?auto=compress&cs=tinysrgb&w=400",
       rating: 4.8,
       artist: "Rahim T."
     }

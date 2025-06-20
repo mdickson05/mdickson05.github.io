@@ -65,7 +65,7 @@ const Support: React.FC = () => {
                 <ArrowRight className="h-5 w-5" />
               </a>
 
-            </div>``
+            </div>
           </div>
         </div>
       </div>

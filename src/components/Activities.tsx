@@ -9,13 +9,13 @@ const Activities: React.FC = () => {
       icon: <Scissors className="h-12 w-12 text-rose-600" />,
       title: "Sewing & Textiles",
       description: "Learn traditional and modern sewing techniques while creating beautiful garments and home textiles.",
-      image: "https://images.pexels.com/photos/1148988/pexels-photo-1148988.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://cache.getarchive.net/Prod/thumb/cdn18/L3Bob3RvLzIwMTkvMTEvMDcvc2V3aW5nLW1hY2hpbmUtb3BlcmF0b3JzLW1ha2luZy1nYXJtZW50cy02Njc3NjMtMTAyNC5qcGc%3D/1024/697/jpg"
     },
     {
       icon: <Palette className="h-12 w-12 text-orange-600" />,
       title: "Arts & Crafts",
       description: "Express your creativity through painting, pottery, and traditional crafts that celebrate our cultural heritage.",
-      image: "https://images.pexels.com/photos/1153929/pexels-photo-1153929.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://cdn12.picryl.com/photo/2016/12/31/arts-and-crafts-baskets-craftsmanship-da13b3-1024.jpg"
     },
     {
       icon: <Sprout className="h-12 w-12 text-green-600" />,
@@ -33,7 +33,7 @@ const Activities: React.FC = () => {
       icon: <Music className="h-12 w-12 text-blue-600" />,
       title: "Music & Dance",
       description: "Celebrate our cultural diversity through traditional music and dance from various ethnic backgrounds.",
-      image: "https://images.pexels.com/photos/1047930/pexels-photo-1047930.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://cdn12.picryl.com/photo/2016/12/31/dancers-girls-traditional-fa75a8-1024.jpg"
     },
     {
       icon: <Coffee className="h-12 w-12 text-amber-600" />,

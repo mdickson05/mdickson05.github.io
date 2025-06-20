@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   isMenuOpen: boolean;
@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           <div className="flex items-center space-x-2">
           <img
             src="/img/logo.svg"
-            alt="Heart"
+            alt="Logo"
             className="h-8 w-8"
           />
             <span className="text-xl font-bold text-gray-900">Mahtaa Recreation Centre</span>

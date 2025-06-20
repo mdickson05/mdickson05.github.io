@@ -25,8 +25,8 @@ const About: React.FC = () => {
           </div>
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <img 
-              src="https://images.pexels.com/photos/1198802/pexels-photo-1198802.jpeg?auto=compress&cs=tinysrgb&w=800" 
-              alt="Community gathering" 
+              src="/img/soccer.png" 
+              alt="Happy Teenage Soccer Group"
               className="w-full h-64 object-cover rounded-xl"
             />
           </div>
