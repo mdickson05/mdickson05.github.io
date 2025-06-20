@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Instagram, X, ChevronLeft, ChevronRight, Heart, MessageCircle, Send, Bookmark } from 'lucide-react';
+import { Instagram, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const SocialMedia: React.FC = () => {
   const [isInstagramOpen, setIsInstagramOpen] = useState(false);
@@ -9,43 +9,19 @@ const SocialMedia: React.FC = () => {
     {
       id: 1,
       image: "/img/grid.png",
-      caption: "We have partnered with local NGOs to create a community-focused recreation centre in Aqtau, a city in Bukharestan where large-scale destruction, insurgencies, and deep-seated ethnic divisions have fostered a tense post-war environment. Mahtaa provides a location where people of all ages, gender and cultural backgrounds can come together to play, learn, create and share. We invite you to follow along our journey, and join the community.",
-      likes: 28473,
-      comments: 561,
-      timeAgo: "3 days ago",
-      isLiked: false
     },
     {
       id: 2,
       image: "/img/post.png",
-      caption: "Creating spaces for healing and growth in our community. Every thread tells a story of resilience and hope. 🧵✨ #CommunityHealing #Handmade #Aqtau #PeaceBuilding",
-      likes: 19231,
-      comments: 189,
-      timeAgo: "1 week ago",
-      isLiked: true
     }
   ];
 
-  const [photos, setPhotos] = useState(instagramPhotos);
-
   const nextPhoto = () => {
-    setCurrentPhoto((prev) => (prev + 1) % photos.length);
+    setCurrentPhoto((prev) => (prev + 1) % instagramPhotos.length);
   };
 
   const prevPhoto = () => {
-    setCurrentPhoto((prev) => (prev - 1 + photos.length) % photos.length);
-  };
-
-  const toggleLike = () => {
-    setPhotos(prev => prev.map((photo, index) => 
-      index === currentPhoto 
-        ? { 
-            ...photo, 
-            isLiked: !photo.isLiked,
-            likes: photo.isLiked ? photo.likes - 1 : photo.likes + 1
-          }
-        : photo
-    ));
+    setCurrentPhoto((prev) => (prev - 1 + instagramPhotos.length) % instagramPhotos.length);
   };
 
   return (
@@ -103,16 +79,15 @@ const SocialMedia: React.FC = () => {
 
             {/* Photo Display */}
             <div className="relative">
-            <div className="w-full max-h-[80vh] flex items-center justify-center bg-gray-100 overflow-hidden">
-              <img
-                src={photos[currentPhoto].image}
-                alt="Instagram post"
-                className="max-w-full max-h-[80vh] object-contain"
-              />
-
+              <div className="w-full max-h-[80vh] flex items-center justify-center bg-gray-100 overflow-hidden">
+                <img
+                  src={instagramPhotos[currentPhoto].image}
+                  alt="Instagram post"
+                  className="max-w-full max-h-[80vh] object-contain"
+                />
                 
                 {/* Navigation buttons */}
-                {photos.length > 1 && (
+                {instagramPhotos.length > 1 && (
                   <>
                     <button
                       onClick={prevPhoto}
@@ -130,9 +105,9 @@ const SocialMedia: React.FC = () => {
                 )}
 
                 {/* Photo indicator dots */}
-                {photos.length > 1 && (
+                {instagramPhotos.length > 1 && (
                   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
-                    {photos.map((_, index) => (
+                    {instagramPhotos.map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setCurrentPhoto(index)}
@@ -143,54 +118,6 @@ const SocialMedia: React.FC = () => {
                     ))}
                   </div>
                 )}
-              </div>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="p-4 border-b border-gray-100">
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center space-x-4">
-                  <button 
-                    onClick={toggleLike}
-                    className="transition-colors"
-                  >
-                    <Heart 
-                      className={`h-7 w-7 ${
-                        photos[currentPhoto].isLiked 
-                          ? 'text-red-500 fill-current' 
-                          : 'text-gray-700 hover:text-gray-500'
-                      }`} 
-                    />
-                  </button>
-                  <button className="text-gray-700 hover:text-gray-500 transition-colors">
-                    <MessageCircle className="h-7 w-7" />
-                  </button>
-                  <button className="text-gray-700 hover:text-gray-500 transition-colors">
-                    <Send className="h-7 w-7" />
-                  </button>
-                </div>
-                <button className="text-gray-700 hover:text-gray-500 transition-colors">
-                  <Bookmark className="h-7 w-7" />
-                </button>
-              </div>
-              
-              <div className="text-sm font-semibold text-gray-900 mb-2">
-                {photos[currentPhoto].likes.toLocaleString()} likes
-              </div>
-            </div>
-
-            {/* Post Caption */}
-            <div className="p-4 max-h-40 overflow-y-auto">
-              <p className="text-sm text-gray-800 leading-relaxed">
-                <span className="font-semibold">mahtaacentre</span> {photos[currentPhoto].caption}
-              </p>
-              <div className="mt-3">
-                <button className="text-sm text-gray-500 hover:text-gray-700">
-                  View all {photos[currentPhoto].comments} comments
-                </button>
-              </div>
-              <div className="text-xs text-gray-400 mt-2 uppercase tracking-wide">
-                {photos[currentPhoto].timeAgo}
               </div>
             </div>
           </div>
