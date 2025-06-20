@@ -42,7 +42,7 @@ const Design: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
             <div className="aspect-video">
               <iframe
-                src="https://sketchfab.com/models/dab59ab2bd7c4c1ea6cc8f39a8216c6e/embed?autostart=0&ui_controls=1&ui_infos=1&ui_inspector=1&ui_stop=1&ui_watermark=1&ui_watermark_link=1"
+                src="https://sketchfab.com/models/598ff9f88d8b4321849c5fe6c36014e1/embed"
                 title="Community Centre 3D Model"
                 className="w-full h-full border-0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
