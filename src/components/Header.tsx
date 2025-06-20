@@ -23,6 +23,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="text-gray-700 hover:text-rose-600 transition-colors">Home</a>
             <a href="#activities" className="text-gray-700 hover:text-rose-600 transition-colors">Activities</a>
+            <a href="#design" className="text-gray-700 hover:text-rose-600 transition-colors">Design</a>
             <a href="#about" className="text-gray-700 hover:text-rose-600 transition-colors">About</a>
             <a href="#support" className="text-gray-700 hover:text-rose-600 transition-colors">Support</a>
             <a href="#marketplace" className="text-gray-700 hover:text-rose-600 transition-colors">Marketplace</a>
@@ -42,6 +43,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             <nav className="flex flex-col space-y-4">
               <a href="#home" className="text-gray-700 hover:text-rose-600 transition-colors">Home</a>
               <a href="#activities" className="text-gray-700 hover:text-rose-600 transition-colors">Activities</a>
+              <a href="#design" className="text-gray-700 hover:text-rose-600 transition-colors">Design</a>
               <a href="#about" className="text-gray-700 hover:text-rose-600 transition-colors">About</a>
               <a href="#support" className="text-gray-700 hover:text-rose-600 transition-colors">Support</a>
               <a href="#marketplace" className="text-gray-700 hover:text-rose-600 transition-colors">Marketplace</a>

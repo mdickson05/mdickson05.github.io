@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Activities from './components/Activities';
+import Design from './components/Design';
 import About from './components/About';
 import Support from './components/Support';
 import Marketplace from './components/Marketplace';
@@ -15,6 +16,7 @@ function App() {
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Hero />
       <Activities />
+      <Design />
       <About />
       <Support />
       <Marketplace />
