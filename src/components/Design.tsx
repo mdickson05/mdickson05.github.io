@@ -6,16 +6,17 @@ const Design: React.FC = () => {
   
   // Placeholder images for room designs
   const roomDesigns = [
-    "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1571467/pexels-photo-1571467.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1571472/pexels-photo-1571472.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1571475/pexels-photo-1571475.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1571477/pexels-photo-1571477.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1571479/pexels-photo-1571479.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "/img/room/1.JPG",
+    "/img/room/2.JPG",
+    "/img/room/3.JPG",
+    "/img/room/4.JPG",
+    "/img/room/5.JPG",
+    "/img/room/6.JPG",
+    "/img/room/7.JPG",
+    "/img/room/8.JPG",
+    "/img/room/9.JPG",
+    "/img/room/10.JPG",
+    "/img/room/11.JPG"
   ];
 
   const nextSlide = () => {
