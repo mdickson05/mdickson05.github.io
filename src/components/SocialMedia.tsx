@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Instagram, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Instagram, X, ChevronLeft, ChevronRight, Heart, MessageCircle, Send, Bookmark } from 'lucide-react';
 
 const SocialMedia: React.FC = () => {
   const [isInstagramOpen, setIsInstagramOpen] = useState(false);
@@ -8,26 +8,44 @@ const SocialMedia: React.FC = () => {
   const instagramPhotos = [
     {
       id: 1,
-      image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800",
-      caption: "Community members working together on a beautiful textile project! 🧵✨ #CommunityLove #Handmade #Aqtau",
-      likes: 127,
-      comments: 23
+      image: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=600&h=800",
+      caption: "We have partnered with local NGOs to create a community-focused recreation centre in Aqtau, a city in Bukharestan where large-scale destruction, insurgencies, and deep-seated ethnic divisions have fostered a tense post-war environment. Mahtaa provides a location where people of all ages, gender and cultural backgrounds can come together to play, learn, create and share. We invite you to follow along our journey, and join the community.",
+      likes: 2847,
+      comments: 156,
+      timeAgo: "3 days ago",
+      isLiked: false
     },
     {
       id: 2,
-      image: "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800",
-      caption: "Our weekly yoga session bringing peace and wellness to our community 🧘‍♀️ #Wellness #Community #Peace #Aqtau",
-      likes: 89,
-      comments: 15
+      image: "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=600&h=800",
+      caption: "Creating spaces for healing and growth in our community. Every thread tells a story of resilience and hope. 🧵✨ #CommunityHealing #Handmade #Aqtau #PeaceBuilding",
+      likes: 1923,
+      comments: 89,
+      timeAgo: "1 week ago",
+      isLiked: true
     }
   ];
 
+  const [photos, setPhotos] = useState(instagramPhotos);
+
   const nextPhoto = () => {
-    setCurrentPhoto((prev) => (prev + 1) % instagramPhotos.length);
+    setCurrentPhoto((prev) => (prev + 1) % photos.length);
   };
 
   const prevPhoto = () => {
-    setCurrentPhoto((prev) => (prev - 1 + instagramPhotos.length) % instagramPhotos.length);
+    setCurrentPhoto((prev) => (prev - 1 + photos.length) % photos.length);
+  };
+
+  const toggleLike = () => {
+    setPhotos(prev => prev.map((photo, index) => 
+      index === currentPhoto 
+        ? { 
+            ...photo, 
+            isLiked: !photo.isLiked,
+            likes: photo.isLiked ? photo.likes - 1 : photo.likes + 1
+          }
+        : photo
+    ));
   };
 
   return (
@@ -58,16 +76,20 @@ const SocialMedia: React.FC = () => {
 
       {/* Instagram Popup Modal */}
       {isInstagramOpen && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-md w-full max-h-[95vh] overflow-hidden shadow-2xl">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
-                  <Instagram className="h-6 w-6 text-white" />
+                <div className="w-10 h-10 rounded-full overflow-hidden">
+                  <img 
+                    src="/img/logo.svg" 
+                    alt="Mahtaa Centre" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900">@mahtaacentre</h3>
+                  <h3 className="font-bold text-gray-900">mahtaacentre</h3>
                   <p className="text-sm text-gray-600">Mahtaa Recreation Centre</p>
                 </div>
               </div>
@@ -81,40 +103,40 @@ const SocialMedia: React.FC = () => {
 
             {/* Photo Display */}
             <div className="relative">
-              <div className="aspect-square bg-gray-100 relative overflow-hidden">
+              <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
                 <img
-                  src={instagramPhotos[currentPhoto].image}
+                  src={photos[currentPhoto].image}
                   alt="Instagram post"
                   className="w-full h-full object-cover"
                 />
                 
                 {/* Navigation buttons */}
-                {instagramPhotos.length > 1 && (
+                {photos.length > 1 && (
                   <>
                     <button
                       onClick={prevPhoto}
-                      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                      className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
                     >
-                      <ChevronLeft className="h-5 w-5" />
+                      <ChevronLeft className="h-4 w-4" />
                     </button>
                     <button
                       onClick={nextPhoto}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
                     >
-                      <ChevronRight className="h-5 w-5" />
+                      <ChevronRight className="h-4 w-4" />
                     </button>
                   </>
                 )}
 
                 {/* Photo indicator dots */}
-                {instagramPhotos.length > 1 && (
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                    {instagramPhotos.map((_, index) => (
+                {photos.length > 1 && (
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                    {photos.map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setCurrentPhoto(index)}
                         className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          index === currentPhoto ? 'bg-white scale-125' : 'bg-white/60 hover:bg-white/80'
+                          index === currentPhoto ? 'bg-white' : 'bg-white/50'
                         }`}
                       />
                     ))}
@@ -123,28 +145,52 @@ const SocialMedia: React.FC = () => {
               </div>
             </div>
 
-            {/* Post Details */}
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-4">
+            {/* Action Buttons */}
+            <div className="p-4 border-b border-gray-100">
+              <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center space-x-4">
-                  <button className="flex items-center space-x-2 text-gray-600 hover:text-red-500 transition-colors">
-                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                    </svg>
-                    <span className="font-semibold">{instagramPhotos[currentPhoto].likes}</span>
+                  <button 
+                    onClick={toggleLike}
+                    className="transition-colors"
+                  >
+                    <Heart 
+                      className={`h-7 w-7 ${
+                        photos[currentPhoto].isLiked 
+                          ? 'text-red-500 fill-current' 
+                          : 'text-gray-700 hover:text-gray-500'
+                      }`} 
+                    />
                   </button>
-                  <button className="flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors">
-                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                    <span className="font-semibold">{instagramPhotos[currentPhoto].comments}</span>
+                  <button className="text-gray-700 hover:text-gray-500 transition-colors">
+                    <MessageCircle className="h-7 w-7" />
+                  </button>
+                  <button className="text-gray-700 hover:text-gray-500 transition-colors">
+                    <Send className="h-7 w-7" />
                   </button>
                 </div>
-                <span className="text-sm text-gray-500">2 days ago</span>
+                <button className="text-gray-700 hover:text-gray-500 transition-colors">
+                  <Bookmark className="h-7 w-7" />
+                </button>
               </div>
-              <p className="text-gray-800 leading-relaxed">
-                <span className="font-semibold">@mahtaacentre</span> {instagramPhotos[currentPhoto].caption}
+              
+              <div className="text-sm font-semibold text-gray-900 mb-2">
+                {photos[currentPhoto].likes.toLocaleString()} likes
+              </div>
+            </div>
+
+            {/* Post Caption */}
+            <div className="p-4 max-h-40 overflow-y-auto">
+              <p className="text-sm text-gray-800 leading-relaxed">
+                <span className="font-semibold">mahtaacentre</span> {photos[currentPhoto].caption}
               </p>
+              <div className="mt-3">
+                <button className="text-sm text-gray-500 hover:text-gray-700">
+                  View all {photos[currentPhoto].comments} comments
+                </button>
+              </div>
+              <div className="text-xs text-gray-400 mt-2 uppercase tracking-wide">
+                {photos[currentPhoto].timeAgo}
+              </div>
             </div>
           </div>
         </div>
