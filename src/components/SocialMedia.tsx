@@ -8,19 +8,19 @@ const SocialMedia: React.FC = () => {
   const instagramPhotos = [
     {
       id: 1,
-      image: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=600&h=800",
+      image: "/img/grid.png",
       caption: "We have partnered with local NGOs to create a community-focused recreation centre in Aqtau, a city in Bukharestan where large-scale destruction, insurgencies, and deep-seated ethnic divisions have fostered a tense post-war environment. Mahtaa provides a location where people of all ages, gender and cultural backgrounds can come together to play, learn, create and share. We invite you to follow along our journey, and join the community.",
-      likes: 2847,
-      comments: 156,
+      likes: 28473,
+      comments: 561,
       timeAgo: "3 days ago",
       isLiked: false
     },
     {
       id: 2,
-      image: "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=600&h=800",
+      image: "/img/post.png",
       caption: "Creating spaces for healing and growth in our community. Every thread tells a story of resilience and hope. 🧵✨ #CommunityHealing #Handmade #Aqtau #PeaceBuilding",
-      likes: 1923,
-      comments: 89,
+      likes: 19231,
+      comments: 189,
       timeAgo: "1 week ago",
       isLiked: true
     }
@@ -103,12 +103,13 @@ const SocialMedia: React.FC = () => {
 
             {/* Photo Display */}
             <div className="relative">
-              <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
-                <img
-                  src={photos[currentPhoto].image}
-                  alt="Instagram post"
-                  className="w-full h-full object-cover"
-                />
+            <div className="w-full max-h-[80vh] flex items-center justify-center bg-gray-100 overflow-hidden">
+              <img
+                src={photos[currentPhoto].image}
+                alt="Instagram post"
+                className="max-w-full max-h-[80vh] object-contain"
+              />
+
                 
                 {/* Navigation buttons */}
                 {photos.length > 1 && (
