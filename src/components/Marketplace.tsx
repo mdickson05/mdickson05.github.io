@@ -8,7 +8,6 @@ const Marketplace: React.FC = () => {
       name: "Handwoven Textile",
       price: "$45",
       image: "https://images.pexels.com/photos/32071429/pexels-photo-32071429.jpeg?auto=compress&cs=tinysrgb&w=400",
-      rating: 4.9,
       artist: "Büşra B."
     },
     {
@@ -16,7 +15,6 @@ const Marketplace: React.FC = () => {
       name: "Ceramic Pottery Set",
       price: "$32",
       image: "https://images.pexels.com/photos/27208616/pexels-photo-27208616.jpeg?auto=compress&cs=tinysrgb&w=400",
-      rating: 4.8,
       artist: "Dmitri L."
     },
     {
@@ -24,7 +22,6 @@ const Marketplace: React.FC = () => {
       name: "Traditional Embroidery",
       price: "$28",
       image: "https://images.pexels.com/photos/5806996/pexels-photo-5806996.jpeg?auto=compress&cs=tinysrgb&w=400",
-      rating: 5.0,
       artist: "Fatima A."
     },
     {
@@ -32,7 +29,6 @@ const Marketplace: React.FC = () => {
       name: "Wooden Carved Art",
       price: "$65",
       image: "https://images.pexels.com/photos/15403144/pexels-photo-15403144.jpeg?auto=compress&cs=tinysrgb&w=400",
-      rating: 4.7,
       artist: "Yusuf M."
     },
     {
@@ -40,7 +36,6 @@ const Marketplace: React.FC = () => {
       name: "Woven Basket",
       price: "$22",
       image: "https://images.pexels.com/photos/31390662/pexels-photo-31390662.jpeg?auto=compress&cs=tinysrgb&w=400",
-      rating: 4.9,
       artist: "Elena S."
     },
     {
@@ -48,7 +43,6 @@ const Marketplace: React.FC = () => {
       name: "Hand-painted Scarf",
       price: "$38",
       image: "https://images.pexels.com/photos/9467196/pexels-photo-9467196.jpeg?auto=compress&cs=tinysrgb&w=400",
-      rating: 4.8,
       artist: "Rahim T."
     }
   ];
@@ -84,11 +78,7 @@ const Marketplace: React.FC = () => {
                   <span className="text-2xl font-bold text-rose-600">{product.price}</span>
                 </div>
                 <p className="text-gray-600 mb-3">by {product.artist}</p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-1">
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                    <span className="text-sm font-medium text-gray-700">{product.rating}</span>
-                  </div>
+                <div className="flex items-center justify-end">
                   <button className="bg-gradient-to-r from-rose-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
                     Add to Cart
                   </button>
