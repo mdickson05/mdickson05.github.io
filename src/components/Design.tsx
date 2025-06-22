@@ -16,7 +16,9 @@ const Design: React.FC = () => {
     "/img/room/8.JPG",
     "/img/room/9.JPG",
     "/img/room/10.JPG",
-    "/img/room/11.JPG"
+    "/img/room/11.JPG",
+    "/img/room/12.jpg",
+    "/img/room/13.JPG"
   ];
 
   const nextSlide = () => {
