@@ -3,7 +3,7 @@ import { Play } from 'lucide-react';
 
 const Video: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-slate-100">
+    <section id="video" className="py-20 bg-gradient-to-br from-gray-50 to-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -38,9 +38,9 @@ const Video: React.FC = () => {
           <div className="text-center mt-12">
             <div className="inline-flex items-center space-x-3 bg-white px-6 py-4 rounded-full shadow-lg">
               <Play className="h-6 w-6 text-blue-600" />
-              <span className="text-gray-700 font-medium">
+              <a href="#about" className="text-gray-700 font-medium">
                 Learn more about our mission and impact
-              </span>
+              </a>
             </div>
           </div>
         </div>
