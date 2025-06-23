@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Video from './components/Video';
 import Activities from './components/Activities';
 import Design from './components/Design';
 import About from './components/About';
@@ -16,6 +17,7 @@ function App() {
     <div className="min-h-screen">
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Hero />
+      <Video />
       <Activities />
       <Design />
       <About />
